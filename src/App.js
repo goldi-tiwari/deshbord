@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import React from 'react';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <AppBar position="fixed">
+        <Toolbar>
+          <Typography variant="h6" style={{ flexGrow: 1, textAlign: 'center' }}>
+            <Button color="inherit">Admin</Button>
+            <Button color="inherit">Project Manager</Button>
+            <Button color="inherit">Team Lead</Button>
+            <Button color="inherit">Employee</Button>
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      
+      <div
+        style={{
+          marginTop: '64px', // Adjust margin to accommodate the height of the AppBar
+          height: '92vh',
+          backgroundImage: `url('https://img.freepik.com/free-vector/office-background-video-conferencing_23-2148638208.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          display:'fixed',
+          
+        }}
+      >
+        <h1
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            color: 'white',
+            textAlign: 'center',
+            fontSize: '3rem', // Responsive font size
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)', // Shadow for better visibility
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Office Management
+        </h1>
+      </div>
+    </>
   );
 }
 
